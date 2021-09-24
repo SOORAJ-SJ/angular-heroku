@@ -28,13 +28,16 @@ export class SeoserviceService {
   twitterUpdateTitle(title:string){
     this.meta.updateTag({name:"twitter:title",content:title})
   }
-  twitterUpdateSite(site:string){
-    this.meta.updateTag({name:"twitter:site",content:site})
+  twitterUpdateSite(){
+    this.meta.updateTag({name:"twitter:site",content:"@Sooraj_SJ_"})
   }
   twitterUpdateDescription(desc:string){
     this.meta.updateTag({name:"twitter:description",content:desc})
   }
   twitterUpdateImage(image:string){
     this.meta.updateTag({name:"twitter:image",content:image})
+  }
+  twitterUpdateUrl(url:string){
+    this.meta.updateTag({name:"twitter:url",content:url})
   }
 }
