@@ -16,6 +16,7 @@ export class DogComponent implements OnInit {
     this.seo.updateImage("https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
     this.seo.updateOgUrl(window.location.href)
     this.seo.updateStiteName()
+    this.seo.updateAppId()
     this.seo.twitterUpdateContent()
     this.seo.twitterUpdateSite()
     this.seo.twitterUpdateTitle("Dogs are fun")
