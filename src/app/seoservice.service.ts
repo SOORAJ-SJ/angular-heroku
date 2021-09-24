@@ -8,7 +8,7 @@ export class SeoserviceService {
 
   constructor( private title:Title, private meta:Meta ) { }
   updateTitle(title:string){
-    this.meta.updateTag({property:'og-title',content:title})
+    this.meta.updateTag({property:'og:title',content:title})
   }
   updateOgUrl(url:string){
     this.meta.updateTag({property:'og:url',content:url})

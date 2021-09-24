@@ -12,9 +12,9 @@ export class DogComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.updateTitle("Dogs are fun");
-    this.seo.updateOgUrl(window.location.href)
     this.seo.updateDescription("You also like dogs, Dont you?")
     this.seo.updateImage("https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    this.seo.updateOgUrl(window.location.href)
     this.seo.updateStiteName()
     this.seo.twitterUpdateContent()
     this.seo.twitterUpdateSite()
