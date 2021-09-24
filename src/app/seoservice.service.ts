@@ -10,6 +10,9 @@ export class SeoserviceService {
   updateTitle(title:string){
     this.meta.updateTag({property:'og:title',content:title})
   }
+  updateType(){
+    this.meta.updateTag({property:"og:type",content:"article"})
+  }
   updateOgUrl(url:string){
     this.meta.updateTag({property:'og:url',content:url})
   }
@@ -18,6 +21,9 @@ export class SeoserviceService {
   }
   updateImage(image:any){
     this.meta.updateTag({property:"og:image",content:image})
+  }
+  updateAppId(){
+    this.meta.updateTag({property:"fb:app_id",content:"4602781033106611"})
   }
   updateStiteName(){
     this.meta.updateTag({property:"og:site_name",content:"Dogs and Cats"})
