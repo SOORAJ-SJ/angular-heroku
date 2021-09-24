@@ -11,18 +11,9 @@ export class DogComponent implements OnInit {
   constructor(private seo:SeoserviceService) { }
 
   ngOnInit(): void {
-    this.seo.updateTitle("Dogs are fun");
-    this.seo.updateDescription("You also like dogs, Dont you?")
-    this.seo.updateImage("https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
-    this.seo.updateOgUrl(window.location.href)
-    this.seo.updateStiteName()
-    this.seo.updateAppId()
-    this.seo.twitterUpdateContent()
-    this.seo.twitterUpdateSite()
-    this.seo.twitterUpdateTitle("Dogs are fun")
-    this.seo.twitterUpdateDescription("You also like dogs, Dont you?")
-    this.seo.twitterUpdateImage("https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
-    this.seo.twitterUpdateUrl(window.location.href)
+    this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
+    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
     var head=document.getElementsByTagName('head')[0]
     var element=document.querySelector("link[rel='canonical'") || null
     if(element==null){
