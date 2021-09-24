@@ -8,15 +8,15 @@ export class SeoserviceService {
 
   constructor( private title:Title, private meta:Meta ) { }
   updateTitle(title:string){
-    this.title.setTitle(title)
+    this.meta.updateTag({property:'og-title',content:title})
   }
   updateOgUrl(url:string){
-    this.meta.updateTag({name:'og:url',content:url})
+    this.meta.updateTag({property:'og:url',content:url})
   }
   updateDescription(desc:string){
-    this.meta.updateTag({name:'description',content:desc})
+    this.meta.updateTag({property:'og-description',content:desc})
   }
   updateImage(image:any){
-    this.meta.updateTag({name:"og:image",content:image})
+    this.meta.updateTag({property:"og:image",content:image})
   }
 }
