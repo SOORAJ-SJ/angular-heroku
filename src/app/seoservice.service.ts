@@ -14,9 +14,27 @@ export class SeoserviceService {
     this.meta.updateTag({property:'og:url',content:url})
   }
   updateDescription(desc:string){
-    this.meta.updateTag({property:'og-description',content:desc})
+    this.meta.updateTag({property:'og:description',content:desc})
   }
   updateImage(image:any){
     this.meta.updateTag({property:"og:image",content:image})
+  }
+  updateStiteName(){
+    this.meta.updateTag({property:"og:site_name",content:"Dogs and Cats"})
+  }
+  twitterUpdateContent(){
+    this.meta.updateTag({name:"twitter:card",content:"summary_large_image"})
+  }
+  twitterUpdateTitle(title:string){
+    this.meta.updateTag({name:"twitter:title",content:title})
+  }
+  twitterUpdateSite(site:string){
+    this.meta.updateTag({name:"twitter:site",content:site})
+  }
+  twitterUpdateDescription(desc:string){
+    this.meta.updateTag({name:"twitter:description",content:desc})
+  }
+  twitterUpdateImage(image:string){
+    this.meta.updateTag({name:"twitter:image",content:image})
   }
 }

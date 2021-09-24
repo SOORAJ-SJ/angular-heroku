@@ -15,6 +15,12 @@ export class DogComponent implements OnInit {
     this.seo.updateOgUrl(window.location.href)
     this.seo.updateDescription("You also like dogs, Dont you?")
     this.seo.updateImage("https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    this.seo.updateStiteName()
+    this.seo.twitterUpdateContent()
+    this.seo.twitterUpdateTitle("Dogs are fun")
+    this.seo.twitterUpdateSite(window.location.href)
+    this.seo.twitterUpdateDescription("You also like dogs, Dont you?")
+    this.seo.twitterUpdateImage("https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
   }
 
   facebookSharer(){
