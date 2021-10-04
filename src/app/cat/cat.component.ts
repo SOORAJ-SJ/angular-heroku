@@ -37,7 +37,7 @@ export class CatComponent implements OnInit {
     window.open("https://twitter.com/intent/tweet?url="+window.location.href,"_blank")
   }
   gmailSharer(){
-    window.open("mailto:subject=Cats&body=cats are evil | http://social-media-icons.herokuapp.com"+this.router.url,"_blank")
+    window.open("mailto:?subject=Cats&body=cats are evil | http://social-media-icons.herokuapp.com"+this.router.url,"_blank")
   }
 
 }
