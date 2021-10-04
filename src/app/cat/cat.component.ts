@@ -17,8 +17,8 @@ export class CatComponent implements OnInit {
       console.log("isPlatformServer cat");
     }
     this.seo.setPrimaryMetaTags("Cats","Cats are evil")
-    this.seo.setFacebookMetaTags("http://social-media-icons.herokuapp.com/"+this.router.url,"Cats","Cats are evil","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
-    this.seo.setTwitterMetaTags("http://social-media-icons.herokuapp.com/"+this.router.url,"Cats","Cats are evil","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
+    this.seo.setFacebookMetaTags("http://social-media-icons.herokuapp.com"+this.router.url,"Cats","Cats are evil","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
+    this.seo.setTwitterMetaTags("http://social-media-icons.herokuapp.com"+this.router.url,"Cats","Cats are evil","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
     // var head=document.getElementsByTagName('head')[0]
     // var element=document.querySelector("link[rel='canonical'") || null
     // if(element==null){
@@ -35,6 +35,9 @@ export class CatComponent implements OnInit {
   twitterSharer(){
     console.log(window.location.href)
     window.open("https://twitter.com/intent/tweet?url="+window.location.href,"_blank")
+  }
+  gmailSharer(){
+    window.open("mailto:subject=Cats&body=cats are evil | http://social-media-icons.herokuapp.com"+this.router.url,"_blank")
   }
 
 }
