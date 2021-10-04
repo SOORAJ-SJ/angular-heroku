@@ -8,31 +8,21 @@ export class SeoserviceService {
 
   constructor( private title:Title, private meta:Meta ) { }
   setPrimaryMetaTags(title:string,description:string){
-    this.meta.addTags(
-      [
-        {name:"title",content:title},
-        {name:"description",content:description}
-      ]
-    )
+    this.meta.updateTag({name:"title",content:title})
+    this.meta.updateTag({name:"description",content:description})
   }
   setFacebookMetaTags(url:string,title:string,description:string,image:string){
-    this.meta.addTags(
-      [
-        {property:"og:type",content:"article"},
-        {property:"og:url",content:url},
-        {property:"og:title",content:title},
-        {property:"og:description",content:description},
-        {property:"og:image",content:image},
-      ]
-    )
+    this.meta.updateTag({property:"og:type",content:"article"})
+    this.meta.updateTag({property:"og:url",content:url})
+    this.meta.updateTag({property:"og:title",content:title})
+    this.meta.updateTag({property:"og:description",content:description})
+    this.meta.updateTag({property:"og:image",content:image})
   }
   setTwitterMetaTags(url:string,title:string,description:string,image:string){
-    this.meta.addTags([
-      {property:"twitter:card",content:"summary_large_image"},
-      {property:"twitter:url",content:url},
-      {property:"twitter:title",content:title},
-      {property:"twitter:description",content:description},
-      {property:"twitter:image",content:image},
-    ])
+    this.meta.updateTag({property:"twitter:card",content:"summary_large_image"})
+    this.meta.updateTag({property:"twitter:url",content:url})
+    this.meta.updateTag({property:"twitter:title",content:title})
+    this.meta.updateTag({property:"twitter:description",content:description})
+    this.meta.updateTag({property:"twitter:image",content:image})
   }
 }

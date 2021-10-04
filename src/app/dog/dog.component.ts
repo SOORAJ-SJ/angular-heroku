@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { SeoserviceService } from '../seoservice.service'
+import { Component, OnInit,Inject,Injectable,PLATFORM_ID } from '@angular/core';
+import { SeoserviceService } from '../seoservice.service';
+import { isPlatformServer } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dog',
@@ -8,20 +10,23 @@ import { SeoserviceService } from '../seoservice.service'
 })
 export class DogComponent implements OnInit {
 
-  constructor(private seo:SeoserviceService) { }
+  constructor(@Inject(PLATFORM_ID) private platformId,private seo:SeoserviceService, private router:Router) { }
 
   ngOnInit(): void {
-    this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
-    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
-    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
-    var head=document.getElementsByTagName('head')[0]
-    var element=document.querySelector("link[rel='canonical'") || null
-    if(element==null){
-      var ele=document.createElement("link")
-      head.appendChild(ele)
-      ele.setAttribute('rel','canonical')
-      ele.setAttribute('href',window.location.href)
+    if(isPlatformServer(this.platformId)){
+      console.log("isPlatformServer dog");
     }
+    this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
+    this.seo.setFacebookMetaTags("http://social-media-icons.herokuapp.com/"+this.router.url,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    this.seo.setTwitterMetaTags("http://social-media-icons.herokuapp.com/"+this.router.url,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    // var head=document.getElementsByTagName('head')[0]
+    // var element=document.querySelector("link[rel='canonical'") || null
+    // if(element==null){
+    //   var ele=document.createElement("link")
+    //   head.appendChild(ele)
+    //   ele.setAttribute('rel','canonical')
+    //   ele.setAttribute('href',window.location.href)
+    // }
   }
 
   facebookSharer(){
