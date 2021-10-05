@@ -11,9 +11,9 @@ export class CatComponent implements OnInit {
   constructor(private seo:SeoserviceService) { }
 
   ngOnInit(): void {
-    this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
-    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
-    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    this.seo.setPrimaryMetaTags("Cats","Cats are evil!")
+    this.seo.setFacebookMetaTags(window.location.href,"Cats","Cats are evil!","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
+    this.seo.setTwitterMetaTags(window.location.href,"Cats","Cats are evil!","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
     var head=document.getElementsByTagName('head')[0]
     var element=document.querySelector("link[rel='canonical'") || null
     if(element==null){
