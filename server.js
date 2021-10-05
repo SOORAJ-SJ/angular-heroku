@@ -5,9 +5,7 @@ const PORT=process.env.PORT||8080;
 const rendertron=require('rendertron-middleware');
 
 const BOTS=rendertron.botUserAgents.concat('googlebot');
-const BOT_UA_PATTERN=new RegExp(BOTS.join('|'),'i')
-
-console.log(BOT_UA_PATTERN)
+const BOT_UA_PATTERN=new RegExp(BOTS.join('|'),'i');
 
 app.use(rendertron.makeMiddleware({
   proxyUrl:'https://render-tron.appspot.com/render',
