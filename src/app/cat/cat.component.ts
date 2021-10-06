@@ -32,6 +32,6 @@ export class CatComponent implements OnInit {
     window.open("https://twitter.com/intent/tweet?url="+window.location.href,"_blank")
   }
   lineSharer(){
-    window.open("http://line.naver.jp/R/msg/text/?=Cats are evil"+window.location.href,"_blank")
+    window.open("http://line.naver.jp/R/msg/text/?Cats are evil "+window.location.href,"_blank")
   }
 }
