@@ -31,5 +31,7 @@ export class CatComponent implements OnInit {
     console.log(window.location.href)
     window.open("https://twitter.com/intent/tweet?url="+window.location.href,"_blank")
   }
-
+  lineSharer(){
+    window.open("https://social-plugins.line.me/lineit/share?url="+window.location.href,"_blank")
+  }
 }
