@@ -34,4 +34,7 @@ export class CatComponent implements OnInit {
   lineSharer(){
     window.open("http://line.naver.jp/R/msg/text/?Cats are evil "+window.location.href,"_blank")
   }
+  lineSharerDefault(){
+    window.open("https://social-plugins.line.me/lineit/share?url="+window.location.href,"_blank")
+  }
 }
