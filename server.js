@@ -8,7 +8,7 @@ const BOTS=rendertron.botUserAgents.concat('googlebot');
 const BOT_UA_PATTERN=new RegExp(BOTS.join('|'),'i');
 
 app.use(rendertron.makeMiddleware({
-  proxyUrl:'https://render-tron.appspot.com/render',
+  proxyUrl:'https://rendertron-test.herokuapp.com/render',
   userAgentPattern: BOT_UA_PATTERN
 }))
 
