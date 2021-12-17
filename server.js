@@ -4,12 +4,12 @@ const DIST_FOLDER=process.cwd()+'/dist/angular-heroku';
 const PORT=process.env.PORT||8080;
 const rendertron=require('rendertron-middleware');
 
-const BOTS=rendertron.botUserAgents.concat('googlebot');
-const BOT_UA_PATTERN=new RegExp(BOTS.join('|'),'i');
+// const BOTS=rendertron.botUserAgents.concat('googlebot');
+// const BOT_UA_PATTERN=new RegExp(BOTS.join('|'),'i');
 
 app.use(rendertron.makeMiddleware({
   proxyUrl:'https://angular-rendertron-server.herokuapp.com/render',
-  userAgentPattern: BOT_UA_PATTERN
+  // userAgentPattern: BOT_UA_PATTERN
 }))
 
 //serve static assets
