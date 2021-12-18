@@ -12,8 +12,8 @@ export class CatComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.setPrimaryMetaTags("Cats","Cats are evil!")
-    this.seo.setFacebookMetaTags(window.location.href,"Cats","Cats are evil!","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
-    this.seo.setTwitterMetaTags(window.location.href,"Cats","Cats are evil!","https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697")
+    this.seo.setFacebookMetaTags(window.location.href,"Cats","Cats are evil!","https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80")
+    this.seo.setTwitterMetaTags(window.location.href,"Cats","Cats are evil!","https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1092&q=80")
     var head=document.getElementsByTagName('head')[0]
     var element=document.querySelector("link[rel='canonical'") || null
     if(element==null){
