@@ -12,12 +12,14 @@ app.use(rendertron.makeMiddleware({
   // userAgentPattern: BOT_UA_PATTERN
 }))
 
+
 //serve static assets
 app.get('*',express.static(DIST_FOLDER));
 
 
 //point all other urls to index.html for single page app
 app.get('*',(req,res)=>{
+  console.log(req.headers['user-agent']);
   res.sendFile(DIST_FOLDER+'/index.html');
 });
 
