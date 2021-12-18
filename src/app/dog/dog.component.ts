@@ -11,7 +11,7 @@ export class DogComponent implements OnInit {
   constructor(private seo:SeoserviceService) { }
 
   ngOnInit(): void {
-    this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
+    /*this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
     this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
     this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
     var head=document.getElementsByTagName('head')[0]
@@ -21,7 +21,7 @@ export class DogComponent implements OnInit {
       head.appendChild(ele)
       ele.setAttribute('rel','canonical')
       ele.setAttribute('href',window.location.href)
-    }
+    }*/
   }
 
   facebookSharer(){
