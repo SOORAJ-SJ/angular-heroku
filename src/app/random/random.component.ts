@@ -17,8 +17,8 @@ export class RandomComponent implements OnInit {
       console.log(result);
       this.image= result;
       this.seo.setPrimaryMetaTags(this.image.created_at,this.image.description)
-      this.seo.setFacebookMetaTags(window.location.href,this.image.created_at,this.image.description,this.image.urls.thumb)
-      this.seo.setTwitterMetaTags(window.location.href,this.image.created_at,this.image.description,this.image.urls.thumb)
+      this.seo.setFacebookMetaTags(window.location.href,this.image.created_at,this.image.description,this.image.urls.regular)
+      this.seo.setTwitterMetaTags(window.location.href,this.image.created_at,this.image.description,this.image.urls.regular)
     })
     var head=document.getElementsByTagName('head')[0]
     var element=document.querySelector("link[rel='canonical'") || null
