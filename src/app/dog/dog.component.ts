@@ -26,8 +26,8 @@ export class DogComponent implements OnInit {
 
   facebookSharer(){
     console.log(window.location.href)
-    console.log("http://www.facebook.com/dialog/feed?app_id="+4602781033106611+"&display=popup&link="+window.location.href+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
-    window.open("http://www.facebook.com/dialog/feed?app_id="+4602781033106611+"&display=popup&link="+window.location.href+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg","_blank")
+    console.log("http://www.facebook.com/dialog/feed?app_id="+307674221261352+"&display=popup&link="+window.location.href+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    window.open("http://www.facebook.com/dialog/feed?app_id="+307674221261352+"&display=popup&link="+window.location.href+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg","_blank")
     
   }
   twitterSharer(){
