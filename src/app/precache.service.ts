@@ -10,6 +10,6 @@ export class PrecacheService {
 
 
   precacheFb():Observable<any>{
-    return this.http.post("https://graph.facebook.com/v12.0/me?fields=id%2Cname&scrapte=true&access_token=EAAEX0ZCyqMigBAFzLkKnVw6GKZACJxmNGOZAgrgvs98R3hZCvF3iYATG0fPZBzOOEx8oLM0lnY0lPyR9bR88BaqGwjg0VjbtRYl99ZBdqvZA8h1rCJtz7JoKrwDYpN5n53ZCtnDhiMuLXAgHjmnlZB8w4TSlCdzyYXoBK2PZAQeMqg7OYIxpmksiZCTPr1u0ZCGowy1J51HOuaWhwgZDZD",{})
+    return this.http.post("https://graph.facebook.com/v12.0/me?fields=id%2Cname&scrapte=true&access_token=EAAEX0ZCyqMigBAL3HMgLqXkUZAsbIfZBDHvpJQF7hOfZB1vVfFHB0PZB6PNHtiNZCxLA7izZAVT0ZBz3OCUZAyTTTtFG3YyQreXo5Tc5tJm1RMkKcpKQEFjOKNkvZCajSTEjtu4VTH2yCTb3v2RFy5YWHTlxYR6gkZBu4CY6jZBVEdw8Bl249SuwiLbWaun7llqRcSt5223qo0cJcG850DNLZA2r130OMHQtLUZCAdKFFPevywXQG2dTBVei1n",{headers:{'content-type':'application/json'}})
   }
 }
