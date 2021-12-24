@@ -31,7 +31,7 @@ export class RandomComponent implements OnInit {
   }
   facebookSharer(){
     console.log(window.location.href)
-    window.open("http://www.facebook.com/sharer/sharer.php?u="+window.location.href,"_blank")
+    window.open("http://www.facebook.com/dialog/feed?app_id="+307674221261352+"&display=popup&link="+window.location.href+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
   }
   twitterSharer(){
     console.log(window.location.href)
