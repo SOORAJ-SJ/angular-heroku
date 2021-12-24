@@ -31,17 +31,17 @@ export class RandomComponent implements OnInit {
   }
   facebookSharer(){
     console.log(window.location.href)
-    window.open("http://www.facebook.com/dialog/feed?app_id="+307674221261352+"&display=popup&link="+window.location.href+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
+    window.open("http://www.facebook.com/dialog/feed?app_id="+307674221261352+"&display=popup&link="+window.location.href+"/?x="+Math.random().toString(36).substring(2, 5)+"&redirect_uri="+window.location.href+"&caption=Just testing the captions&description=new description&picture=https://dogsculture.com/wp-content/uploads/2019/02/labrador-retriever.jpg")
   }
   twitterSharer(){
     console.log(window.location.href)
-    window.open("https://twitter.com/intent/tweet?url="+window.location.href,"_blank")
+    window.open("https://twitter.com/intent/tweet?url="+window.location.href+"/?x="+Math.random().toString(36).substring(2, 5),"_blank")
   }
   lineSharer(){
-    window.open("http://line.naver.jp/R/msg/text/?Cats are evil "+window.location.href,"_blank")
+    window.open("http://line.naver.jp/R/msg/text/?Cats are evil "+window.location.href+"/?x="+Math.random().toString(36).substring(2, 5),"_blank")
   }
   lineSharerDefault(){
-    window.open("https://social-plugins.line.me/lineit/share?url="+window.location.href,"_blank")
+    window.open("https://social-plugins.line.me/lineit/share?url="+window.location.href+"/?x="+Math.random().toString(36).substring(2, 5),"_blank")
   }
   
 }
