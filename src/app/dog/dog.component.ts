@@ -12,8 +12,8 @@ export class DogComponent implements OnInit {
 
   ngOnInit(): void {
     this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
-    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://mexp-test-bucket.s3.ap-northeast-1.amazonaws.com/activityImages/16394622081931a06c0a2-3da6-4a32-9f49-2b2b8227a7a9")
+    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://mexp-test-bucket.s3.ap-northeast-1.amazonaws.com/activityImages/16394622081931a06c0a2-3da6-4a32-9f49-2b2b8227a7a9")
     var head=document.getElementsByTagName('head')[0]
     var element=document.querySelector("link[rel='canonical'") || null
     if(element==null){
