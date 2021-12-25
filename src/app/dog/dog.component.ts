@@ -18,8 +18,8 @@ export class DogComponent implements OnInit {
       console.log(res);
     })
     this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
-    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://unsplash.com/photos/2l0CWTpcChI/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8ZG9nfHwwfHx8fDE2NDAzNTQ0NjU&force=true&w=1920")
-    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?","https://unsplash.com/photos/2l0CWTpcChI/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8ZG9nfHwwfHx8fDE2NDAzNTQ0NjU&force=true&w=1920")
+    this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?",location.origin+"/assets/images/1640363898554e6be57b7-2ae4-4108-b882-7a8af856fffa.jpg")
+    this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?",location.origin+"/angular-dynamic-seo.herokuapp.com/../assets/images/1640363898554e6be57b7-2ae4-4108-b882-7a8af856fffa.jpg")
     var head=document.getElementsByTagName('head')[0]
     var element=document.querySelector("link[rel='canonical'") || null
     if(element==null){
