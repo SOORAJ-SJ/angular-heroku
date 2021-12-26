@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SeoserviceService } from '../seoservice.service'
-import { PrecacheService } from '../precache.service';
 
 
 @Component({
@@ -10,13 +9,9 @@ import { PrecacheService } from '../precache.service';
 })
 export class DogComponent implements OnInit {
 
-  constructor(private seo:SeoserviceService, private precache: PrecacheService) { }
+  constructor(private seo:SeoserviceService) { }
 
   ngOnInit(): void {
-    this.precache.precacheFb()
-    .subscribe((res)=>{
-      console.log(res);
-    })
     this.seo.setPrimaryMetaTags("Dogs and Cats","You love dogs and cats, Don't you?")
     this.seo.setFacebookMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?",location.origin+"/assets/images/1640363898554e6be57b7-2ae4-4108-b882-7a8af856fffa.jpg")
     this.seo.setTwitterMetaTags(window.location.href,"Dogs and Cats","You love dogs and cats, Don't you?",location.origin+"/angular-dynamic-seo.herokuapp.com/../assets/images/1640363898554e6be57b7-2ae4-4108-b882-7a8af856fffa.jpg")
